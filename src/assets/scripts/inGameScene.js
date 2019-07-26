@@ -576,9 +576,6 @@ cc.Class({
                 this.overX = (tempX - this.ball.x) / 60
                 this.overY = (tempY - this.ball.y) / 60
                 require('dataBase').isOver = 1
-                setTimeout(function(){
-                    require('dataBase').isOver = 3    
-                }, 3000)
                 this.ggNode = this.groundHoleArray[e]
             }
             this.background.setPosition(-(this.dx / 10 % 960) + 480, 0)
@@ -620,7 +617,7 @@ cc.Class({
                 require('dataBase').isOver = 2
                 setTimeout(function(){
                     require('dataBase').isOver = 3    
-                }, 2000)
+                }, 1000)
             }
             if (this.holeArray[e].x < -this.length * 2) this.holeArray[e].removeFromParent()
         }
